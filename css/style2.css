@@ -1,0 +1,242 @@
+@font-face {font-family: Kufi; src: url('../fonts/Droid.Arabic.Kufi.ttf');}
+body{
+    font-family: Kufi, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    --main-color:#50abf1;
+    
+}
+ul {list-style: none;padding: 0;margin: 0;}
+a {text-decoration: none !important;}
+p {margin-bottom: 0;}
+
+
+/* -- header -- */
+header {
+    padding: 15px 0;
+    background: var(--main-color);
+}
+header .social-media {
+    text-align: left;
+    position: relative;
+}
+header .social-media li  {
+    display: inline-block;
+    margin-right: 12px;
+}
+
+header .social-media li a {
+    width: 30px;
+    height: 30px;
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background:#244c6a;
+    color: #FFF;
+    font-size: 15px;
+    transition: all .3s ease-in-out
+}
+header .social-media li a:hover {
+    background: #FFF;
+    color: #244c6a;
+    cursor: pointer;
+}
+
+header .social-media li.search .search-area {
+    position: absolute;
+    z-index: 999;
+    bottom: -40px;
+    left: 0;
+    display: none;
+}
+
+header .search-area {
+    visibility: hidden;
+    opacity: 0;
+}
+
+header .search-area input {
+    width: 360px;
+    height: 30px;
+    z-index: 999;
+    padding-right: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+header .search-area.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+header .search-area.open input {
+    opacity: 1;
+    width: 100%;
+    visibility: visible;
+    right: 0;
+}
+
+header .search-area button ,
+header .search-area input {
+    border: 0;
+    outline: 0
+}
+header .search-area button {
+    background: transparent;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #244c6a;
+   
+}
+header .search-area button .fa-search {
+   color: #FFF;
+   
+}
+
+header.fixed {
+    padding: 5px 0;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    left: 0;
+    animation: showHeader 0.5s ease-in-out;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+}
+
+@keyframes showHeader {
+    0% {
+        top: -100px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+header.fixed .social-media li {
+    display: none;
+}
+
+header.fixed .social-media li.search {
+    display: block;
+}
+
+header.fixed .social-media li.search a {
+    position: absolute;
+    z-index: 999;
+    top: 12px;
+    right: 740px;
+}
+header.fixed .navbar {
+    margin: 0;
+}
+
+header.fixed .nav-log-container {
+    margin-top: 0;
+}
+
+header.fixed .nav-log-container .logo {
+    height: 60px;
+}
+
+header.fixed .search-area button {
+    line-height: 50px;
+    padding: 0 10px;
+    top: 10px;
+    left: 10px;
+}
+
+header.fixed .search-area input {
+    height: 55px;
+    padding-right: 15px;
+    top: 5px;
+}
+
+/* -- navbar -- */
+.navbar {
+    margin-top: 20px
+}
+.nav-log-container{
+    margin-top: 10px;
+     background: var(--main-color) ;   
+}
+.nav-log-container .logo {
+    height: 100px;
+}
+
+.nav > li > a:hover, .nav > li > a:focus,
+.nav > li.active a {
+    background: none;
+    color: #244c6a;
+}
+.nav > li > a {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 13px
+}
+/*-- ./header -- */
+
+
+
+/* -- footer --*/
+footer {
+    margin-top: 20px;
+    background: var(--main-color);
+    padding: 40px 0 10px;
+}
+
+footer img {
+    width: 150px
+}
+footer ul li {
+    padding: 10px;
+    text-align: center
+}
+footer ul li a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+    transition: all .5s ease-in-out
+}
+footer ul li a:hover {
+    color:#244c6a;
+}
+footer .social-media li {
+    display: inline-block;
+    text-align: center
+}
+footer .social-media li a {
+    font-size:20px
+}
+
+.copyrights {
+    text-align: left;
+    color: #fff;
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+.copyrights a {
+    color: #fff;
+    text-decoration: underline !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.copyrights a:hover {
+    color: #244c6a;
+}
+
+/* -- ./footer -- */
